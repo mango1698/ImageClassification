@@ -34,7 +34,7 @@ data_transform = {
 }
 
 # os.getcwd()：获取当前文件所在目录
-data_root = os.path.join(os.getcwd()+"..")
+data_root = os.path.join(os.getcwd(),"..")
 image_path = data_root + "/dataset/flower_data"
 train_data = datasets.ImageFolder(root=image_path+"/train", transform=data_transform['train'])
 train_size = len(train_data)
