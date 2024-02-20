@@ -123,7 +123,7 @@ for epoch in range(epochs):
         writer['test'].add_scalar("Loss", test_loss, epoch + 1)
         writer['test'].add_scalar("Accuracy", test_accuracy_num / test_size, epoch + 1)
 
-        torch.save(model, "./model/net_{}.pth".format(epoch + 1))
+        torch.save(model.state_dict(), "./model/net_weight_{}.pth".format(epoch + 1))
 print("Total Time：{}".format(time.perf_counter()-t1))
 writer['train'].close()
 writer['test'].close()
